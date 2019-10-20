@@ -1,0 +1,15 @@
+{
+  "name": "mysysinfoapp",
+  "version": "1.0.0",
+  "description": "My test electron application",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "AeroztaR",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^6.0.12"
+  }
+}

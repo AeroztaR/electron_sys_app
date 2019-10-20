@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>My App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>System Info</h1>
+        <div class="output"></div>
+    </div>
+    
+    <script>
+        let outputInfo = `
+            <ul class="collection with-header">
+                <li class="collection-header"><h4>About PC</h4></li>
+                <li class="collection-item">Computer: ${process.env.COMPUTERNAME}</li>
+                <li class="collection-item">OS: ${process.env.OS}</li>
+                <li class="collection-item">Username: ${process.env.USERNAME}</li>
+                <li class="collection-item">Node: ${process.versions.node}</li>
+                <li class="collection-item">Chrome: ${process.versions.chrome}</li>
+                <li class="collection-item">Platform: ${process.platform}</li>
+            </ul>
+        `;
+        document.querySelector('.output').innerHTML = outputInfo;
+    </script>
+</body>
+</html>
